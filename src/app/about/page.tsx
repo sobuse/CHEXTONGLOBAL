@@ -61,7 +61,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="eyebrow">LEADERSHIP</p>
-            <h2 className="section-title mt-4">CEO Name</h2>
+            <h2 className="section-title mt-4">Chinyere Agwuncha</h2>
             <p className="mt-2 text-deep-teal/70">CEO, Chexton Global</p>
             <p className="mt-6 text-lg leading-relaxed text-deep-teal/85">
               At Chexton Global, our mission is simple — to connect people with
