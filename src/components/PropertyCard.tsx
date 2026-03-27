@@ -33,21 +33,24 @@ export default function PropertyCard({
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className="group overflow-hidden rounded-3xl border border-[#d8d9d2] bg-[#fdfcf8] shadow-[0_24px_70px_rgba(7,36,40,0.08)]"
+      className="group min-w-0 max-w-full overflow-hidden rounded-3xl border border-[#d8d9d2] bg-[#fdfcf8] shadow-[0_24px_70px_rgba(7,36,40,0.08)]"
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-56 w-full max-w-full overflow-hidden sm:h-64">
         <Image
           src={image}
           alt={title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition duration-700 ease-out group-hover:scale-110"
           loading="lazy"
         />
       </div>
-      <div className="p-7">
-        <h3 className="font-serif text-2xl">{title}</h3>
-        <p className="mt-3 text-deep-teal/75">{description}</p>
-        <p className="mt-4 text-lg font-semibold text-deep-teal">{price}</p>
+      <div className="min-w-0 p-5 break-words sm:p-7">
+        <h3 className="break-words font-serif text-xl sm:text-2xl">{title}</h3>
+        <p className="mt-3 break-words text-deep-teal/75">{description}</p>
+        <p className="mt-4 break-words text-lg font-semibold text-deep-teal">
+          {price}
+        </p>
 
         {hasExtraDetails ? (
           <button

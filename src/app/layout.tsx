@@ -31,15 +31,15 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-cream text-deep-teal">
+      <body className="min-h-full min-w-0 overflow-x-hidden bg-cream text-deep-teal">
         <Navbar />
-        <main className="pt-20">{children}</main>
+        <main className="min-w-0 pt-20">{children}</main>
         <Footer />
         <a
           href="https://wa.me/2349050083475"
           target="_blank"
           rel="noreferrer"
-          className="fixed bottom-5 right-5 z-50 rounded-full bg-[#24D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#24D366]/30 transition hover:scale-105 md:hidden"
+          className="fixed bottom-5 right-5 z-40 max-w-[calc(100vw-2rem)] truncate rounded-full bg-[#24D366] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-[#24D366]/30 transition hover:scale-105 md:hidden"
         >
           Chat on WhatsApp
         </a>

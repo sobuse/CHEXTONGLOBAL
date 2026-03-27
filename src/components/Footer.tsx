@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#041f23] px-6 py-12 text-white md:px-10">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <div>
+    <footer className="bg-[#041f23] px-4 py-12 text-white md:px-6 lg:px-10">
+      <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-6 break-words md:flex-row md:items-center md:justify-between">
+        <div className="min-w-0">
           <h3 className="font-serif text-2xl">CHEXTON GLOBAL</h3>
           <p className="mt-2 text-white/80">Phone: 09050083475</p>
           <p className="text-white/80">Email: ehuerikenbaba@gmail.com</p>

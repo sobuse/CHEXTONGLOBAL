@@ -23,7 +23,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative min-h-[88vh] overflow-hidden">
+    <section className="relative min-h-[88vh] w-full max-w-[100vw] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[activeIndex].src}
@@ -38,13 +38,14 @@ export default function HeroSlider() {
             alt={slides[activeIndex].alt}
             fill
             priority={activeIndex === 0}
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#062428]/75 via-[#062428]/45 to-[#062428]/40" />
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 mx-auto flex min-h-[88vh] w-full max-w-7xl flex-col items-start justify-center px-6 py-16 md:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[88vh] w-full min-w-0 max-w-7xl flex-col items-start justify-center px-4 py-14 sm:px-6 md:px-10 md:py-16">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +58,7 @@ export default function HeroSlider() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="max-w-3xl font-serif text-4xl leading-tight text-white md:text-6xl"
+          className="max-w-3xl break-words font-serif text-4xl leading-tight text-white md:text-6xl"
         >
           Luxury Living, Perfectly Delivered
         </motion.h1>
@@ -65,7 +66,7 @@ export default function HeroSlider() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="mt-6 max-w-2xl text-base leading-relaxed text-white/90 md:text-xl"
+          className="mt-6 max-w-2xl break-words text-base leading-relaxed text-white/90 md:text-xl"
         >
           Premium real estate solutions tailored for you — in Nigeria and beyond.
         </motion.p>

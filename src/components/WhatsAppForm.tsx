@@ -49,8 +49,8 @@ Please assist me.`;
   };
 
   return (
-    <form onSubmit={onSubmit} className="luxury-form">
-      <div className="grid gap-4 md:grid-cols-2">
+    <form onSubmit={onSubmit} className="luxury-form min-w-0 max-w-full">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <input
           required
           type="text"

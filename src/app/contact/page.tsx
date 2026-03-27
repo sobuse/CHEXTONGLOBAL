@@ -14,26 +14,29 @@ const fadeUp = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative min-h-[50vh] overflow-hidden">
+      <section className="relative min-h-[50vh] w-full max-w-[100vw] overflow-hidden">
         <Image
           src="/images/contact-hero.jpg"
           alt="Contact Chexton Global"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#062428]/80 to-[#062428]/45" />
-        <div className="relative z-10 mx-auto flex min-h-[50vh] w-full max-w-7xl items-center px-6 md:px-10">
-          <h1 className="font-serif text-4xl text-white md:text-6xl">Contact Us</h1>
+        <div className="relative z-10 mx-auto flex min-h-[50vh] w-full min-w-0 max-w-7xl items-center px-4 sm:px-6 md:px-10">
+          <h1 className="break-words font-serif text-4xl text-white md:text-6xl">
+            Contact Us
+          </h1>
         </div>
       </section>
 
       <motion.section {...fadeUp} className="section-wrap">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.2fr]">
-          <div>
+        <div className="section-inner grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
+          <div className="min-w-0 break-words">
             <p className="eyebrow">CONTACT DETAILS</p>
             <h2 className="section-title mt-4">Let&apos;s get you started</h2>
-            <div className="mt-6 space-y-3 text-lg text-deep-teal/85">
+            <div className="mt-6 space-y-3 break-words text-lg text-deep-teal/85">
               <p>Phone: 09050083475</p>
               <p>Email: ehuerikenbaba@gmail.com</p>
               <a

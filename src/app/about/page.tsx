@@ -13,17 +13,18 @@ const fadeUp = {
 export default function AboutPage() {
   return (
     <>
-      <section className="relative min-h-[60vh] overflow-hidden">
+      <section className="relative min-h-[60vh] w-full max-w-[100vw] overflow-hidden">
         <Image
           src="/images/about-hero.jpg"
           alt="About Chexton Global"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#062428]/80 to-[#062428]/45" />
-        <div className="relative z-10 mx-auto flex min-h-[60vh] w-full max-w-7xl items-center px-6 md:px-10">
-          <div>
+        <div className="relative z-10 mx-auto flex min-h-[60vh] w-full min-w-0 max-w-7xl items-center px-4 sm:px-6 md:px-10">
+          <div className="min-w-0 break-words">
             <h1 className="font-serif text-4xl text-white md:text-6xl">
               About Chexton Global
             </h1>
@@ -36,9 +37,9 @@ export default function AboutPage() {
       </section>
 
       <motion.section {...fadeUp} className="section-wrap">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto w-full max-w-4xl break-words">
           <p className="eyebrow">COMPANY STORY</p>
-          <p className="mt-6 text-lg leading-relaxed text-deep-teal/85">
+          <p className="mt-6 break-words text-lg leading-relaxed text-deep-teal/85">
             Chexton Global is a forward-thinking real estate company dedicated
             to helping clients secure high-value properties across Nigeria and
             internationally. With a focus on trust, transparency, and premium
@@ -49,17 +50,18 @@ export default function AboutPage() {
       </motion.section>
 
       <motion.section {...fadeUp} className="section-wrap bg-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
-          <div className="relative h-[420px] overflow-hidden rounded-2xl shadow-[0_20px_55px_rgba(7,36,40,0.15)]">
+        <div className="section-inner grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div className="relative min-h-[280px] w-full overflow-hidden rounded-2xl shadow-[0_20px_55px_rgba(7,36,40,0.15)] sm:min-h-[360px] lg:h-[420px]">
             <Image
               src="/images/ceo.jpg"
               alt="CEO of Chexton Global"
               fill
               loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
-          <div>
+          <div className="min-w-0 break-words">
             <p className="eyebrow">LEADERSHIP</p>
             <h2 className="section-title mt-4">Chinyere Agwuncha</h2>
             <p className="mt-2 text-deep-teal/70">CEO, Chexton Global</p>
@@ -74,9 +76,9 @@ export default function AboutPage() {
       </motion.section>
 
       <motion.section {...fadeUp} className="section-wrap">
-        <div className="mx-auto max-w-7xl">
+        <div className="section-inner">
           <p className="eyebrow text-center">OUR VALUES</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {["Trust", "Excellence", "Transparency", "Client-First Approach"].map(
               (value) => (
                 <motion.div
@@ -84,7 +86,7 @@ export default function AboutPage() {
                   whileHover={{ y: -4 }}
                   className="feature-tile text-center"
                 >
-                  <h3 className="font-serif text-2xl">{value}</h3>
+                  <h3 className="break-words font-serif text-2xl">{value}</h3>
                 </motion.div>
               )
             )}

@@ -72,10 +72,10 @@ export default function HomePage() {
       <HeroSlider />
 
       <motion.section {...fadeUp} className="section-wrap">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto w-full max-w-4xl text-center break-words">
           <p className="eyebrow">ABOUT CHEXTON GLOBAL</p>
           <h2 className="section-title mt-4">A trusted luxury partner</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-deep-teal/85">
+          <p className="mx-auto mt-6 max-w-3xl break-words text-lg leading-relaxed text-deep-teal/85">
             Chexton Global is a trusted real estate brand delivering luxury
             homes, smart investments, and seamless property acquisition for
             clients in Nigeria and the diaspora.
@@ -84,10 +84,10 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section {...fadeUp} id="properties" className="section-wrap bg-white">
-        <div className="mx-auto max-w-7xl">
+        <div className="section-inner">
           <p className="eyebrow text-center">FEATURED PROPERTIES</p>
           <h2 className="section-title mt-4 text-center">Signature opportunities</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProperties.map((property) => (
               <PropertyCard key={property.title} {...property} />
             ))}
@@ -96,12 +96,12 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section {...fadeUp} className="section-wrap">
-        <div className="mx-auto max-w-7xl">
+        <div className="section-inner">
           <p className="eyebrow text-center">WHY CHOOSE US</p>
           <h2 className="section-title mt-4 text-center">
             Built for discerning investors
           </h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               ["Trust", "A reputation built on reliable outcomes."],
               ["Excellence", "Premium standards in every client touchpoint."],
@@ -113,8 +113,8 @@ export default function HomePage() {
                 whileHover={{ y: -4 }}
                 className="feature-tile"
               >
-                <h3 className="font-serif text-2xl">{title}</h3>
-                <p className="mt-3 text-deep-teal/75">{description}</p>
+                <h3 className="break-words font-serif text-2xl">{title}</h3>
+                <p className="mt-3 break-words text-deep-teal/75">{description}</p>
               </motion.div>
             ))}
           </div>
@@ -122,11 +122,11 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section {...fadeUp} id="onboarding" className="section-wrap bg-white">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.2fr]">
-          <div>
+        <div className="section-inner grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
+          <div className="min-w-0">
             <p className="eyebrow">CLIENT ONBOARDING</p>
             <h2 className="section-title mt-4">Start your acquisition journey</h2>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-deep-teal/80">
+            <p className="mt-6 max-w-md break-words text-lg leading-relaxed text-deep-teal/80">
               Complete this quick form and we will continue the conversation on
               WhatsApp immediately.
             </p>
@@ -136,23 +136,24 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section {...fadeUp} className="section-wrap">
-        <div className="mx-auto max-w-7xl">
+        <div className="section-inner">
           <p className="eyebrow text-center">INSTAGRAM</p>
           <h2 className="section-title mt-4 text-center">Lifestyle highlights</h2>
-          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3">
             {instagramImages.map((image, index) => (
               <a
                 href="https://www.instagram.com/chitherealtor/"
                 key={`${image}-${index}`}
                 target="_blank"
                 rel="noreferrer"
-                className="instagram-card relative block h-40 md:h-56"
+                className="instagram-card relative block aspect-[4/3] min-h-0 w-full max-w-full md:aspect-auto md:h-56"
               >
                 <Image
                   src={image}
                   alt="Chexton Global Instagram preview"
                   fill
                   loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
                 />
               </a>
@@ -172,7 +173,7 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section {...fadeUp} className="section-wrap bg-deep-teal text-white">
-        <div className="mx-auto max-w-5xl text-center">
+        <div className="mx-auto w-full max-w-5xl text-center break-words">
           <p className="eyebrow text-gold">NEXT STEP</p>
           <h2 className="section-title mt-4 text-white">
             Ready to own your dream property?
